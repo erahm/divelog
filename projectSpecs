@@ -1,0 +1,50 @@
+Dives:
+	Data:
+		- depth
+			- english / metric
+			- graph
+		- time
+			- dive time
+			- total time underwater (calculated)
+				- allow user to input a starting time under water in the event that they don't want to go through and log dives prior to a given date
+		- pressure group
+			- make this optional for non-computer divers
+		- weight worn
+			- english / metric
+		- type of air
+			- compressed
+			- Nitrox
+			- enriched
+		- air consumption
+			- starting air pressure
+			- ending air pressure
+			- english / metric
+		- type water
+		- gear worn
+			- wetsuit
+				- thickness
+			- hood
+				- thickness
+			- gloves
+			- boots
+		- location
+			- map view
+		- comments about the dive
+		- people who were on the dive with the user
+		- photos
+			- photo managment (crud)
+			- photo gallery
+
+
+	Social:
+		- link other users to your dive
+		- show other user's comments about your dive
+		- show other user's photos about your dive
+		- show map locations of your friend's dives
+		- link dive shops to a dive
+		- comment on dive shops
+
+
+	Users:
+		- certification level
+		- certification (PADI vs SSI)
