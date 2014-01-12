@@ -136,7 +136,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.2)
   rails_12factor
-  sass-rails (~> 4.0.0)
+  sass-rails (~> 4.0.1)
   sdoc
   therubyracer
   turbolinks
