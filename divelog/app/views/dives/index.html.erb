@@ -5,8 +5,10 @@
     <tr>
       <th>Dive number</th>
       <th>Depth</th>
-      <th>Pressure group</th>
+      <th>Starting pressure group</th>
+      <th>Ending pressure group</th>
       <th>Weight</th>
+      <th>Dive time</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,8 +20,10 @@
       <tr>
         <td><%= dive.dive_number %></td>
         <td><%= dive.depth %></td>
-        <td><%= dive.pressure_group %></td>
+        <td><%= dive.starting_pressure_group %></td>
+        <td><%= dive.ending_pressure_group %></td>
         <td><%= dive.weight %></td>
+        <td><%= dive.dive_time %></td>
         <td><%= link_to 'Show', dive %></td>
         <td><%= link_to 'Edit', edit_dive_path(dive) %></td>
         <td><%= link_to 'Destroy', dive, method: :delete, data: { confirm: 'Are you sure?' } %></td>

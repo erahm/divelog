@@ -20,12 +20,20 @@
     <%= f.number_field :depth %>
   </div>
   <div class="field">
-    <%= f.label :pressure_group %><br>
-    <%= f.text_field :pressure_group %>
+    <%= f.label :starting_pressure_group %><br>
+    <%= f.text_field :starting_pressure_group %>
+  </div>
+  <div class="field">
+    <%= f.label :ending_pressure_group %><br>
+    <%= f.text_field :ending_pressure_group %>
   </div>
   <div class="field">
     <%= f.label :weight %><br>
     <%= f.number_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :dive_time %><br>
+    <%= f.number_field :dive_time %>
   </div>
   <div class="actions">
     <%= f.submit %>
