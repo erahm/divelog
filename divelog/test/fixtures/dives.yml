@@ -3,11 +3,15 @@
 one:
   dive_number: 1
   depth: 1
-  pressure_group: MyString
+  starting_pressure_group: MyString
+  ending_pressure_group: MyString
   weight: 1
+  dive_time: 1
 
 two:
   dive_number: 1
   depth: 1
-  pressure_group: MyString
+  starting_pressure_group: MyString
+  ending_pressure_group: MyString
   weight: 1
+  dive_time: 1

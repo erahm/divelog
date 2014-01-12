@@ -11,13 +11,23 @@
 </p>
 
 <p>
-  <strong>Pressure group:</strong>
-  <%= @dive.pressure_group %>
+  <strong>Starting pressure group:</strong>
+  <%= @dive.starting_pressure_group %>
+</p>
+
+<p>
+  <strong>Ending pressure group:</strong>
+  <%= @dive.ending_pressure_group %>
 </p>
 
 <p>
   <strong>Weight:</strong>
   <%= @dive.weight %>
+</p>
+
+<p>
+  <strong>Dive time:</strong>
+  <%= @dive.dive_time %>
 </p>
 
 <%= link_to 'Edit', edit_dive_path(@dive) %> |
