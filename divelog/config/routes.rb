@@ -1,4 +1,6 @@
 Divelog::Application.routes.draw do
+  resources :dives
+
   get "welcome/index"
 
   root "welcome#index"

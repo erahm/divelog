@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dive_number: 1
+  depth: 1
+  pressure_group: MyString
+  weight: 1
+
+two:
+  dive_number: 1
+  depth: 1
+  pressure_group: MyString
+  weight: 1
