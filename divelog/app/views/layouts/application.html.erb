@@ -49,20 +49,19 @@
           <a class="brand" href="/">Divelog</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "My Dives", "/dives"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-                <% if user_signed_in? %>
+            <% if user_signed_in? %>
                   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Hello, <%= current_user.email %><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
                       <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
                     </ul>
                   </li>
+                  <li><%= link_to "My Dives", "/dives"  %></li>
               <% else %>
                   <li><%= link_to "Login", new_user_session_path %></li>
               <% end %>
-
+              <li><%= link_to "Link2", "/path2"  %></li>
+              <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
