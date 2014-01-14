@@ -18,7 +18,7 @@ class DivesControllerTest < ActionController::TestCase
 
   test "should create dive" do
     assert_difference('Dive.count') do
-      post :create, dive: { depth: @dive.depth, dive_number: @dive.dive_number, dive_time: @dive.dive_time, ending_pressure_group: @dive.ending_pressure_group, starting_pressure_group: @dive.starting_pressure_group, weight: @dive.weight }
+      post :create, dive: { bottom_temperature: @dive.bottom_temperature, depth: @dive.depth, dive_number: @dive.dive_number, dive_time: @dive.dive_time, ending_air: @dive.ending_air, ending_pressure_group: @dive.ending_pressure_group, starting_air: @dive.starting_air, starting_pressure_group: @dive.starting_pressure_group, weight: @dive.weight }
     end
 
     assert_redirected_to dive_path(assigns(:dive))
@@ -35,7 +35,7 @@ class DivesControllerTest < ActionController::TestCase
   end
 
   test "should update dive" do
-    patch :update, id: @dive, dive: { depth: @dive.depth, dive_number: @dive.dive_number, dive_time: @dive.dive_time, ending_pressure_group: @dive.ending_pressure_group, starting_pressure_group: @dive.starting_pressure_group, weight: @dive.weight }
+    patch :update, id: @dive, dive: { bottom_temperature: @dive.bottom_temperature, depth: @dive.depth, dive_number: @dive.dive_number, dive_time: @dive.dive_time, ending_air: @dive.ending_air, ending_pressure_group: @dive.ending_pressure_group, starting_air: @dive.starting_air, starting_pressure_group: @dive.starting_pressure_group, weight: @dive.weight }
     assert_redirected_to dive_path(assigns(:dive))
   end
 
