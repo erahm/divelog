@@ -30,5 +30,20 @@
   <%= @dive.dive_time %>
 </p>
 
+<p>
+  <strong>Starting air:</strong>
+  <%= @dive.starting_air %>
+</p>
+
+<p>
+  <strong>Ending air:</strong>
+  <%= @dive.ending_air %>
+</p>
+
+<p>
+  <strong>Bottom temperature:</strong>
+  <%= @dive.bottom_temperature %>
+</p>
+
 <%= link_to 'Edit', edit_dive_path(@dive) %> |
 <%= link_to 'Back', dives_path %>

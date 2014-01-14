@@ -9,6 +9,9 @@
       <th>Ending pressure group</th>
       <th>Weight</th>
       <th>Dive time</th>
+      <th>Starting air</th>
+      <th>Ending air</th>
+      <th>Bottom temperature</th>
       <th></th>
       <th></th>
       <th></th>
@@ -24,6 +27,9 @@
         <td><%= dive.ending_pressure_group %></td>
         <td><%= dive.weight %></td>
         <td><%= dive.dive_time %></td>
+        <td><%= dive.starting_air %></td>
+        <td><%= dive.ending_air %></td>
+        <td><%= dive.bottom_temperature %></td>
         <td><%= link_to 'Show', dive %></td>
         <td><%= link_to 'Edit', edit_dive_path(dive) %></td>
         <td><%= link_to 'Destroy', dive, method: :delete, data: { confirm: 'Are you sure?' } %></td>

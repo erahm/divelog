@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140114015102) do
+ActiveRecord::Schema.define(version: 20140114035127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "air_types", force: true do |t|
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "dives", force: true do |t|
     t.integer  "dive_number"
@@ -23,6 +29,9 @@ ActiveRecord::Schema.define(version: 20140114015102) do
     t.string   "ending_pressure_group"
     t.integer  "weight"
     t.integer  "dive_time"
+    t.integer  "starting_air"
+    t.integer  "ending_air"
+    t.integer  "bottom_temperature"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,5 +53,11 @@ ActiveRecord::Schema.define(version: 20140114015102) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "water_types", force: true do |t|
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
