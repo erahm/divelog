@@ -7,6 +7,9 @@ class CreateDives < ActiveRecord::Migration
       t.string :ending_pressure_group
       t.integer :weight
       t.integer :dive_time
+      t.integer :starting_air
+      t.integer :ending_air
+      t.integer :bottom_temperature
 
       t.timestamps
     end

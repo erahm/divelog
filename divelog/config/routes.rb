@@ -1,7 +1,7 @@
 Divelog::Application.routes.draw do
-  devise_for :users
   resources :dives
 
+  devise_for :users
   get "welcome/index"
 
   root "welcome#index"
