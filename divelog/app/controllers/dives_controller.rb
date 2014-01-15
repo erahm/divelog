@@ -4,7 +4,8 @@ class DivesController < ApplicationController
   # GET /dives
   # GET /dives.json
   def index
-    @dives = Dive.all
+    @user = User.find(current_user)
+    @dives = Dive.where(:user_id => @user.id)
   end
 
   # GET /dives/1
@@ -25,6 +26,7 @@ class DivesController < ApplicationController
   # POST /dives.json
   def create
     @dive = Dive.new(dive_params)
+    @dive.user = current_user
 
     respond_to do |format|
       if @dive.save
