@@ -1,0 +1,53 @@
+<%= form_for(@dive) do |f| %>
+  <% if @dive.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dive.errors.count, "error") %> prohibited this dive from being saved:</h2>
+
+      <ul>
+      <% @dive.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dive_number %><br>
+    <%= f.number_field :dive_number %>
+  </div>
+  <div class="field">
+    <%= f.label :depth %><br>
+    <%= f.number_field :depth %>
+  </div>
+  <div class="field">
+    <%= f.label :starting_pressure_group %><br>
+    <%= f.text_field :starting_pressure_group %>
+  </div>
+  <div class="field">
+    <%= f.label :ending_pressure_group %><br>
+    <%= f.text_field :ending_pressure_group %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.number_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :dive_time %><br>
+    <%= f.number_field :dive_time %>
+  </div>
+  <div class="field">
+    <%= f.label :starting_air %><br>
+    <%= f.number_field :starting_air %>
+  </div>
+  <div class="field">
+    <%= f.label :ending_air %><br>
+    <%= f.number_field :ending_air %>
+  </div>
+  <div class="field">
+    <%= f.label :bottom_temperature %><br>
+    <%= f.number_field :bottom_temperature %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

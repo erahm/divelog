@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dive_number: 1
+  depth: 1
+  starting_pressure_group: MyString
+  ending_pressure_group: MyString
+  weight: 1
+  dive_time: 1
+  starting_air: 1
+  ending_air: 1
+  bottom_temperature: 1
+
+two:
+  dive_number: 1
+  depth: 1
+  starting_pressure_group: MyString
+  ending_pressure_group: MyString
+  weight: 1
+  dive_time: 1
+  starting_air: 1
+  ending_air: 1
+  bottom_temperature: 1

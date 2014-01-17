@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dive number:</strong>
+  <%= @dive.dive_number %>
+</p>
+
+<p>
+  <strong>Depth:</strong>
+  <%= @dive.depth %>
+</p>
+
+<p>
+  <strong>Starting pressure group:</strong>
+  <%= @dive.starting_pressure_group %>
+</p>
+
+<p>
+  <strong>Ending pressure group:</strong>
+  <%= @dive.ending_pressure_group %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @dive.weight %>
+</p>
+
+<p>
+  <strong>Dive time:</strong>
+  <%= @dive.dive_time %>
+</p>
+
+<p>
+  <strong>Starting air:</strong>
+  <%= @dive.starting_air %>
+</p>
+
+<p>
+  <strong>Ending air:</strong>
+  <%= @dive.ending_air %>
+</p>
+
+<p>
+  <strong>Bottom temperature:</strong>
+  <%= @dive.bottom_temperature %>
+</p>
+
+<%= link_to 'Edit', edit_dive_path(@dive) %> |
+<%= link_to 'Back', dives_path %>
