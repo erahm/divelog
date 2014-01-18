@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20140115040038) do
     t.integer  "air_type_id"
   end
 
+  add_index "dives", ["user_id"], name: "index_dives_on_user_id", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
