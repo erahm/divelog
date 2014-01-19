@@ -1,5 +1,6 @@
 class DivesController < ApplicationController
   before_action :set_dive, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /dives
   # GET /dives.json

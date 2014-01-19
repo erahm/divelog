@@ -1,4 +1,6 @@
 Divelog::Application.routes.draw do
+  resources :comments
+
   resources :dives
 
   devise_for :users
