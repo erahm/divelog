@@ -45,5 +45,12 @@
   <%= @dive.bottom_temperature %>
 </p>
 
+<h3>Comments</h3>
+  <% @comments.each do |comment| %>
+        <div class="comment well"><%= comment.comment_text %></div>
+  <% end %>
+<%= link_to 'Add Comment', new_comment_path(@dive) %>
+<br />
+
 <%= link_to 'Edit', edit_dive_path(@dive) %> |
 <%= link_to 'Back', dives_path %>
