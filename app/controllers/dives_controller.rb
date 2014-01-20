@@ -42,13 +42,15 @@ class DivesController < ApplicationController
   # PATCH/PUT /dives/1
   # PATCH/PUT /dives/1.json
   def update
-    respond_to do |format|
-      if @dive.update(dive_params)
-        format.html { redirect_to @dive, notice: 'Dive was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @dive.errors, status: :unprocessable_entity }
+    if dive_belongs_to_user
+      respond_to do |format|
+        if @dive.update(dive_params)
+          format.html { redirect_to @dive, notice: 'Dive was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { render action: 'edit' }
+          format.json { render json: @dive.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -56,10 +58,12 @@ class DivesController < ApplicationController
   # DELETE /dives/1
   # DELETE /dives/1.json
   def destroy
-    @dive.destroy
-    respond_to do |format|
-      format.html { redirect_to dives_url }
-      format.json { head :no_content }
+    if dive_belongs_to_user
+      @dive.destroy
+      respond_to do |format|
+        format.html { redirect_to dives_url }
+        format.json { head :no_content }
+      end
     end
   end
 
@@ -72,5 +76,15 @@ class DivesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def dive_params
       params.require(:dive).permit(:dive_number, :depth, :starting_pressure_group, :ending_pressure_group, :weight, :dive_time, :starting_air, :ending_air, :bottom_temperature)
+    end
+
+    def dive_belongs_to_user
+      retval = false
+
+      if @dive.user == current_user
+        retval = true
+      end
+
+      return retval
     end
 end
