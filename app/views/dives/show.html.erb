@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Dive number:</strong>
+  <strong>Dive Number:</strong>
   <%= @dive.dive_number %>
 </p>
 
@@ -11,12 +11,12 @@
 </p>
 
 <p>
-  <strong>Starting pressure group:</strong>
+  <strong>Starting Pressure Group:</strong>
   <%= @dive.starting_pressure_group %>
 </p>
 
 <p>
-  <strong>Ending pressure group:</strong>
+  <strong>Ending Pressure Group:</strong>
   <%= @dive.ending_pressure_group %>
 </p>
 
@@ -26,22 +26,22 @@
 </p>
 
 <p>
-  <strong>Dive time:</strong>
+  <strong>Dive Time:</strong>
   <%= @dive.dive_time %>
 </p>
 
 <p>
-  <strong>Starting air:</strong>
+  <strong>Starting Air:</strong>
   <%= @dive.starting_air %>
 </p>
 
 <p>
-  <strong>Ending air:</strong>
+  <strong>Ending Air:</strong>
   <%= @dive.ending_air %>
 </p>
 
 <p>
-  <strong>Bottom temperature:</strong>
+  <strong>Bottom Temperature:</strong>
   <%= @dive.bottom_temperature %>
 </p>
 
@@ -49,8 +49,9 @@
   <% @comments.each do |comment| %>
         <div class="comment well"><%= comment.comment_text %></div>
   <% end %>
-<%= link_to 'Add Comment', new_comment_path(@dive) %>
+<%= link_to 'Add Comment', new_comment_path(:dive_id => @dive.id, :user_id => current_user) %>
 <br />
 
 <%= link_to 'Edit', edit_dive_path(@dive) %> |
-<%= link_to 'Back', dives_path %>
+<%= link_to 'Back', dives_path %> |
+<%= link_to 'Delete', @dive, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -11,21 +11,28 @@
     </div>
   <% end %>
 
+  <%
+    groups = []
+    for group in 'A'...'Z'
+      groups.push(group)
+    end
+  %>
+
   <div class="field">
     <%= f.label :dive_number %><br>
     <%= f.number_field :dive_number %>
   </div>
   <div class="field">
-    <%= f.label :depth %><br>
+    <%= f.label "Depth in Feet" %><br>
     <%= f.number_field :depth %>
   </div>
   <div class="field">
     <%= f.label :starting_pressure_group %><br>
-    <%= f.text_field :starting_pressure_group %>
+    <%= f.select :starting_pressure_group, options_for_select(groups, :selected => @dive.starting_pressure_group) %>
   </div>
   <div class="field">
     <%= f.label :ending_pressure_group %><br>
-    <%= f.text_field :ending_pressure_group %>
+    <%= f.select :ending_pressure_group, options_for_select(groups, :selected => @dive.ending_pressure_group) %>
   </div>
   <div class="field">
     <%= f.label :weight %><br>

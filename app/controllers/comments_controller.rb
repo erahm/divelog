@@ -16,6 +16,8 @@ class CommentsController < ApplicationController
   # GET /comments/new
   def new
     @comment = Comment.new
+    @comment.dive_id = params[:dive_id]
+    @comment.user_id = params[:user_id]
   end
 
   # GET /comments/1/edit

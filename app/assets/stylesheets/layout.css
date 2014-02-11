@@ -24,3 +24,9 @@
 .navbar-inner .nav li > a:hover {
 	color: #FFAE00;
 }
+
+.nav-list li > a:hover {
+	color: #FFAE00;
+	text-shadow: 1px 0 #030303;
+	background-color: #EEEEEE;
+}

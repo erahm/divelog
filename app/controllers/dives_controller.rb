@@ -12,7 +12,7 @@ class DivesController < ApplicationController
   # GET /dives/1
   # GET /dives/1.json
   def show
-    @comments = @dive.comments
+    @comments = Comment.where(:dive_id => @dive.id)
   end
 
   # GET /dives/new
