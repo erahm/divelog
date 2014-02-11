@@ -1,6 +1,10 @@
-<h1>Editing dive</h1>
+<% if @dive.user == current_user %>
+	<h1>Editing dive</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @dive %> |
-<%= link_to 'Back', dives_path %>
+	<%= render 'form' %>
+	
+	<%= link_to 'Show', @dive %> |
+	<%= link_to 'Back', dives_path %>
+<% else #TODO: come up with better wording %>
+	<h2>Requested Dive is not yours</h2>
+<% end %>
