@@ -14,6 +14,8 @@
     <%= f.label :comment_text %><br>
     <%= f.text_area :comment_text %>
   </div>
+  <%= f.hidden_field :user_id, :value => @comment.user_id %>
+  <%= f.hidden_field :dive_id, :value => @comment.dive_id %>
   <div class="actions">
     <%= f.submit %>
   </div>
